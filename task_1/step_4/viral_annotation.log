@@ -1,0 +1,108 @@
+[19:03:47] This is prokka 1.15.6
+[19:03:47] Written by Torsten Seemann <torsten.seemann@gmail.com>
+[19:03:47] Homepage is https://github.com/tseemann/prokka
+[19:03:47] Local time is Sun Mar 29 19:03:47 2026
+[19:03:47] You are bogdanamaksimova
+[19:03:47] Operating system is darwin
+[19:03:47] You have BioPerl 1.7.8
+[19:03:47] System has 8 cores.
+[19:03:47] Will use maximum of 8 cores.
+[19:03:47] Annotating as >>> Viruses <<<
+[19:03:47] Generating locus_tag from 'viral_contig_corrected.fasta' contents.
+[19:03:47] Setting --locustag NPPGHODM from MD5 799018d64d3dcadd424d88e9cb31497c
+[19:03:47] Enabling options to ensure Genbank/ENA/DDJB submission compliance.
+[19:03:47] Re-using existing --outdir prokka_output
+[19:03:47] Using filename prefix: viral_annotation.XXX
+[19:03:47] Setting HMMER_NCPU=1
+[19:03:47] Writing log to: prokka_output/viral_annotation.log
+[19:03:47] Command: /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/prokka viral_contig_corrected.fasta --outdir prokka_output --prefix viral_annotation --kingdom Viruses --compliant --centre X --force
+[19:03:47] Looking for 'aragorn' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/aragorn
+[19:03:47] Determined aragorn version is v1.2 from 'ARAGORN v1.2.41 Dean Laslett'
+[19:03:47] Looking for 'barrnap' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/barrnap
+[19:03:47] Determined barrnap version is v0.9 from 'barrnap 0.9'
+[19:03:47] Looking for 'blastp' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/blastp
+[19:03:47] Determined blastp version is v2.17 from 'blastp: 2.17.0+'
+[19:03:47] Looking for 'cmpress' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/cmpress
+[19:03:47] Determined cmpress version is v1.1 from '# INFERNAL 1.1.5 (Sep 2023)'
+[19:03:47] Looking for 'cmscan' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/cmscan
+[19:03:47] Determined cmscan version is v1.1 from '# INFERNAL 1.1.5 (Sep 2023)'
+[19:03:47] Looking for 'egrep' - found /usr/bin/egrep
+[19:03:47] Looking for 'find' - found /usr/bin/find
+[19:03:47] Looking for 'grep' - found /usr/bin/grep
+[19:03:47] Looking for 'hmmpress' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/hmmpress
+[19:03:47] Determined hmmpress version is v3.4 from '# HMMER 3.4 (Aug 2023); http://hmmer.org/'
+[19:03:47] Looking for 'hmmscan' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/hmmscan
+[19:03:47] Determined hmmscan version is v3.4 from '# HMMER 3.4 (Aug 2023); http://hmmer.org/'
+[19:03:47] Looking for 'java' - found /usr/bin/java
+[19:03:47] Looking for 'makeblastdb' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/makeblastdb
+[19:03:47] Determined makeblastdb version is v2.17 from 'makeblastdb: 2.17.0+'
+[19:03:47] Looking for 'minced' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/minced
+[19:03:48] Determined minced version is v4.2 from 'minced 0.4.2'
+[19:03:48] Looking for 'parallel' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/parallel
+[19:03:48] Determined parallel version is 20260122 from 'GNU parallel 20260122'
+[19:03:48] Looking for 'prodigal' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/prodigal
+[19:03:48] Determined prodigal version is v2.6 from 'Prodigal V2.6.3: February, 2016'
+[19:03:48] Looking for 'prokka-genbank_to_fasta_db' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/prokka-genbank_to_fasta_db
+[19:03:48] Looking for 'sed' - found /usr/bin/sed
+[19:03:48] Looking for 'tbl2asn' - found /Users/bogdanamaksimova/miniconda3/envs/prokka_env/bin/tbl2asn
+[19:03:49] Determined tbl2asn version is v25.7 from 'tbl2asn 25.7   arguments:'
+[19:03:49] Using genetic code table 1.
+[19:03:49] Loading and checking input file: viral_contig_corrected.fasta
+[19:03:49] Wrote 1 contigs totalling 29268 bp.
+[19:03:49] Predicting tRNAs and tmRNAs
+[19:03:49] Running: aragorn -l -gc1  -w prokka_output\/viral_annotation\.fna
+[19:03:49] Found 0 tRNAs
+[19:03:49] Disabling rRNA search: --kingdom=Viruses or --norrna=0
+[19:03:49] Skipping ncRNA search, enable with --rfam if desired.
+[19:03:49] Total of 0 tRNA + rRNA features
+[19:03:49] Searching for CRISPR repeats
+[19:03:49] Found 0 CRISPRs
+[19:03:49] Predicting coding sequences
+[19:03:49] Contigs total 29268 bp, so using single mode
+[19:03:49] Running: prodigal -i prokka_output\/viral_annotation\.fna -c -m -g 1 -p single -f sco -q
+[19:03:49] Found 9 CDS
+[19:03:49] Connecting features back to sequences
+[19:03:49] Not using genus-specific database. Try --usegenus to enable it.
+[19:03:49] Annotating CDS, please be patient.
+[19:03:49] Will use 8 CPUs for similarity searching.
+[19:03:49] There are still 9 unannotated CDS left (started with 9)
+[19:03:49] Will use blast to search against /Users/bogdanamaksimova/miniconda3/envs/prokka_env/db/kingdom/Viruses/sprot with 8 CPUs
+[19:03:49] Running: cat prokka_output\/viral_annotation\.sprot\.tmp\.66726\.faa | parallel --gnu --plain -j 8 --block 594 --recstart '>' --pipe blastp -query - -db /Users/bogdanamaksimova/miniconda3/envs/prokka_env/db/kingdom/Viruses/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > prokka_output\/viral_annotation\.sprot\.tmp\.66726\.blast 2> /dev/null
+[19:03:52] Deleting unwanted file: prokka_output/viral_annotation.sprot.tmp.66726.faa
+[19:03:52] Deleting unwanted file: prokka_output/viral_annotation.sprot.tmp.66726.blast
+[19:03:52] Found 8 unique /gene codes.
+[19:03:52] Fixed 0 colliding /gene names.
+[19:03:52] Adding /locus_tag identifiers
+[19:03:52] Assigned 9 locus_tags to CDS and RNA features.
+[19:03:52] Writing outputs to prokka_output/
+[19:03:52] Generating annotation statistics file
+[19:03:52] Generating Genbank and Sequin files
+[19:03:52] Running: tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.15.6 from https://github.com/tseemann/prokka' -Z prokka_output\/viral_annotation\.err -i prokka_output\/viral_annotation\.fsa 2> /dev/null
+[19:03:55] Deleting unwanted file: prokka_output/errorsummary.val
+[19:03:55] Deleting unwanted file: prokka_output/viral_annotation.dr
+[19:03:55] Deleting unwanted file: prokka_output/viral_annotation.fixedproducts
+[19:03:55] Deleting unwanted file: prokka_output/viral_annotation.ecn
+[19:03:55] Deleting unwanted file: prokka_output/viral_annotation.val
+[19:03:55] Repairing broken .GBK output that tbl2asn produces...
+[19:03:55] Running: sed 's/COORDINATES: profile/COORDINATES:profile/' < prokka_output\/viral_annotation\.gbf > prokka_output\/viral_annotation\.gbk
+[19:03:55] Deleting unwanted file: prokka_output/viral_annotation.gbf
+[19:03:55] Output files:
+[19:03:55] prokka_output/viral_annotation.fsa
+[19:03:55] prokka_output/viral_annotation.faa
+[19:03:55] prokka_output/viral_annotation.log
+[19:03:55] prokka_output/viral_annotation.ffn
+[19:03:55] prokka_output/viral_annotation.gbk
+[19:03:55] prokka_output/viral_annotation.gff
+[19:03:55] prokka_output/viral_annotation.sqn
+[19:03:55] prokka_output/viral_annotation.tbl
+[19:03:55] prokka_output/viral_annotation.fna
+[19:03:55] prokka_output/viral_annotation.tsv
+[19:03:55] prokka_output/viral_annotation.err
+[19:03:55] prokka_output/viral_annotation.txt
+[19:03:55] prokka_output/viral_annotation.gbf-r
+[19:03:55] Annotation finished successfully.
+[19:03:55] Walltime used: 0.13 minutes
+[19:03:55] If you use this result please cite the Prokka paper:
+[19:03:55] Seemann T (2014) Prokka: rapid prokaryotic genome annotation. Bioinformatics. 30(14):2068-9.
+[19:03:55] Type 'prokka --citation' for more details.
+[19:03:55] Thank you, come again.
