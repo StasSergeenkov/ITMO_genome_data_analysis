@@ -1,0 +1,23 @@
+Assembly	spades_scaffolds
+# contigs (>= 0 bp)	111219
+# contigs (>= 1000 bp)	666
+# contigs (>= 5000 bp)	4
+# contigs (>= 10000 bp)	1
+# contigs (>= 25000 bp)	1
+# contigs (>= 50000 bp)	0
+Total length (>= 0 bp)	27362468
+Total length (>= 1000 bp)	1042805
+Total length (>= 5000 bp)	48741
+Total length (>= 10000 bp)	29907
+Total length (>= 25000 bp)	29907
+Total length (>= 50000 bp)	0
+# contigs	3667
+Largest contig	29907
+Total length	2988329
+GC (%)	45.92
+N50	779
+N90	532
+auN	1351.8
+L50	1182
+L90	3087
+# N's per 100 kbp	17.37

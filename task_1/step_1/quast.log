@@ -1,0 +1,67 @@
+/Users/bogdanamaksimova/miniconda3/envs/quast_env/bin/quast spades_scaffolds.fasta -o quast_out
+
+Version: 5.3.0
+
+System information:
+  OS: macOS-14.6-x86_64-i386-64bit-Mach-O (macosx)
+  Python version: 3.13.12
+  CPUs number: 8
+
+Started: 2026-03-28 19:38:11
+
+Logging to /Users/bogdanamaksimova/Desktop/quast_out/quast.log
+NOTICE: Maximum number of threads is set to 2 (use --threads option to set it manually)
+WARNING: Maximum number of threads is reset to 1 to prevent the crash due to a known bug when using multi-threading in Python 3.8+ on macOS! For multi-threading please downgrade your Python to 3.7. Sorry for the inconvenience! Please find more details in https://github.com/ablab/quast/issues/175
+
+CWD: /Users/bogdanamaksimova/Desktop
+Main parameters: 
+  MODE: default, threads: 1, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  spades_scaffolds.fasta ==> spades_scaffolds
+
+2026-03-28 19:39:11
+Running Basic statistics processor...
+  Contig files: 
+    spades_scaffolds
+  Calculating N50 and L50...
+    spades_scaffolds, N50 = 779, L50 = 1182, auN = 1351.8, Total length = 2988329, GC % = 45.92, # N's per 100 kbp =  17.37
+  Drawing Nx plot...
+    saved to /Users/bogdanamaksimova/Desktop/quast_out/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Users/bogdanamaksimova/Desktop/quast_out/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Users/bogdanamaksimova/Desktop/quast_out/basic_stats/GC_content_plot.pdf
+  Drawing spades_scaffolds GC content plot...
+    saved to /Users/bogdanamaksimova/Desktop/quast_out/basic_stats/spades_scaffolds_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /Users/bogdanamaksimova/Desktop/quast_out/basic_stats/coverage_histogram.pdf
+  Drawing spades_scaffolds coverage histogram (bin size: 1x)...
+    saved to /Users/bogdanamaksimova/Desktop/quast_out/basic_stats/spades_scaffolds_coverage_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-03-28 19:39:15
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2026-03-28 19:39:15
+RESULTS:
+  Text versions of total report are saved to /Users/bogdanamaksimova/Desktop/quast_out/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Users/bogdanamaksimova/Desktop/quast_out/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /Users/bogdanamaksimova/Desktop/quast_out/report.html
+  PDF version (tables and plots) is saved to /Users/bogdanamaksimova/Desktop/quast_out/report.pdf
+  Icarus (contig browser) is saved to /Users/bogdanamaksimova/Desktop/quast_out/icarus.html
+  Log is saved to /Users/bogdanamaksimova/Desktop/quast_out/quast.log
+
+Finished: 2026-03-28 19:39:15
+Elapsed time: 0:01:04.582255
+NOTICEs: 2; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
