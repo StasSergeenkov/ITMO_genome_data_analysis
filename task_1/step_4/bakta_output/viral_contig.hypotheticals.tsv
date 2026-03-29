@@ -1,0 +1,14 @@
+#Annotated with Bakta v1.12.0, https://github.com/oschwengers/bakta
+#Database v6.0, https://doi.org/10.5281/zenodo.4247252
+#Sequence Id	Start	Stop	Strand	Locus Tag	Mol Weight [kDa]	Iso El. Point	Pfam hits	Dbxrefs
+contig_1	1	1260	-	CGEIEN_001	45.6	10.1		
+contig_1	1275	1640	-	CGEIEN_002	13.8	5.4		
+contig_1	1647	1778	-	CGEIEN_003	5.2	4.2		
+contig_1	1775	2140	-	CGEIEN_004	13.7	8.2		
+contig_1	2147	2332	-	CGEIEN_005	7.3	4.7		
+contig_1	2343	3011	-	CGEIEN_006	25.1	9.5		
+contig_1	3192	3353	+	CGEIEN_007	5.6	9.7		
+contig_1	3314	4141	-	CGEIEN_008	31.1	5.6		
+contig_1	4150	7971	-	CGEIEN_009	141.2	6.2		
+contig_1	7979	15766	-	CGEIEN_010	293.0	6.9	PF13086.12|AAA_11, PF13087.12|AAA_12, PF13538.12|UvrD_C_2, PF13604.12|AAA_30	PFAM:PF13086.12, PFAM:PF13087.12, PFAM:PF13538.12, PFAM:PF13604.12
+contig_1	16051	29217	-	CGEIEN_011	488.1	6.0	PF01661.27|Macro	PFAM:PF01661.27

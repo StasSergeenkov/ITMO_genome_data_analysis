@@ -1,0 +1,17 @@
+# Annotated with Bakta
+# Software: v1.12.0
+# Database: v6.0, full
+# DOI: 10.1099/mgen.0.000685
+# URL: github.com/oschwengers/bakta
+#Sequence Id	Type	Start	Stop	Strand	Locus Tag	Gene	Product	DbXrefs
+contig_1	cds	1	1260	-	CGEIEN_001		hypothetical protein	
+contig_1	cds	1275	1640	-	CGEIEN_002		hypothetical protein	
+contig_1	cds	1647	1778	-	CGEIEN_003		hypothetical protein	
+contig_1	cds	1775	2140	-	CGEIEN_004		hypothetical protein	
+contig_1	cds	2147	2332	-	CGEIEN_005		hypothetical protein	
+contig_1	cds	2343	3011	-	CGEIEN_006		hypothetical protein	
+contig_1	cds	3192	3353	+	CGEIEN_007		hypothetical protein	
+contig_1	cds	3314	4141	-	CGEIEN_008		hypothetical protein	
+contig_1	cds	4150	7971	-	CGEIEN_009		hypothetical protein	
+contig_1	cds	7979	15766	-	CGEIEN_010		hypothetical protein	PFAM:PF13086.12, PFAM:PF13087.12, PFAM:PF13538.12, PFAM:PF13604.12
+contig_1	cds	16051	29217	-	CGEIEN_011		hypothetical protein	PFAM:PF01661.27

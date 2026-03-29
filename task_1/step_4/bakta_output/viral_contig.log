@@ -1,0 +1,157 @@
+15:00:47.224 - INFO - UTILS - version=1.12.0
+15:00:47.225 - INFO - UTILS - developer: Oliver Schwengers, github.com/oschwengers
+15:00:47.225 - INFO - UTILS - command: /home/stas/miniconda3/envs/bakta/bin/bakta --db /home/stas/bakta_db/db --output /mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results --prefix viral_contig --threads 4 --verbose /mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/viral_contig.fasta
+15:00:47.225 - INFO - UTILS - local time: 2026-03-29 15:00:47
+15:00:47.273 - INFO - UTILS - machine: type=x86_64, cores=4
+15:00:47.273 - INFO - UTILS - system: type=Linux, release=6.8.0-106-generic
+15:00:47.274 - INFO - UTILS - python: version=3.13.12, implementation=CPython
+15:00:47.274 - INFO - CONFIG - threads=4
+15:00:47.275 - INFO - CONFIG - verbose=True
+15:00:47.275 - INFO - CONFIG - debug=False
+15:00:47.275 - INFO - CONFIG - database: type=parameter, path=/home/stas/bakta_db/db
+15:00:47.276 - INFO - CONFIG - tmp-path=/tmp/tmpcox0cx5t
+15:00:47.276 - INFO - CONFIG - genome-path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/viral_contig.fasta
+15:00:47.277 - INFO - CONFIG - min_contig_length=1
+15:00:47.277 - INFO - CONFIG - prefix=viral_contig
+15:00:47.277 - INFO - CONFIG - output-path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results
+15:00:47.277 - INFO - CONFIG - force=False
+15:00:47.278 - INFO - CONFIG - genus=None
+15:00:47.278 - INFO - CONFIG - species=None
+15:00:47.278 - INFO - CONFIG - strain=None
+15:00:47.278 - INFO - CONFIG - plasmid=None
+15:00:47.278 - INFO - CONFIG - complete=False
+15:00:47.279 - INFO - CONFIG - prodigal_tf=None
+15:00:47.279 - INFO - CONFIG - translation_table=11
+15:00:47.279 - INFO - CONFIG - gram=?
+15:00:47.279 - INFO - CONFIG - compliant=False
+15:00:47.279 - INFO - CONFIG - meta=False
+15:00:47.280 - INFO - CONFIG - partial=False
+15:00:47.280 - INFO - CONFIG - locus=None
+15:00:47.280 - INFO - CONFIG - locus-tag=None
+15:00:47.280 - INFO - CONFIG - locus-tag-increment=1
+15:00:47.280 - INFO - CONFIG - keep_contig_headers=False
+15:00:47.281 - INFO - CONFIG - replicon-table=None
+15:00:47.281 - INFO - CONFIG - regions=None
+15:00:47.281 - INFO - CONFIG - skip-tRNA=False
+15:00:47.281 - INFO - CONFIG - skip-tmRNA=False
+15:00:47.281 - INFO - CONFIG - skip-rRNA=False
+15:00:47.281 - INFO - CONFIG - skip-ncRNA=False
+15:00:47.282 - INFO - CONFIG - skip-ncRNA-region=False
+15:00:47.282 - INFO - CONFIG - skip-CRISPR=False
+15:00:47.282 - INFO - CONFIG - skip-CDS=False
+15:00:47.282 - INFO - CONFIG - skip-pseudo=False
+15:00:47.282 - INFO - CONFIG - skip-sORF=False
+15:00:47.283 - INFO - CONFIG - skip-gap=False
+15:00:47.283 - INFO - CONFIG - skip-ori=False
+15:00:47.283 - INFO - CONFIG - skip-filter=False
+15:00:47.283 - INFO - CONFIG - skip-plot=False
+15:00:47.284 - INFO - DB - detected: major=6, minor=0, type=full, date=2025-02-24
+15:00:47.584 - INFO - UTILS - dependency: tool=tRNAscan-SE, version=v2.0.12, path=/home/stas/miniconda3/envs/bakta/bin/tRNAscan-SE
+15:00:47.593 - INFO - UTILS - dependency: tool=Aragorn, version=v1.2.41, path=/home/stas/miniconda3/envs/bakta/bin/aragorn
+15:00:47.603 - INFO - UTILS - dependency: tool=CMscan, version=v1.1.5, path=/home/stas/miniconda3/envs/bakta/bin/cmscan
+15:00:47.610 - INFO - UTILS - dependency: tool=PilerCR, version=v1.6.0, path=/home/stas/miniconda3/envs/bakta/bin/pilercr
+15:00:47.709 - INFO - UTILS - dependency: tool=Pyrodigal, version=v3.7.1, path=/home/stas/miniconda3/envs/bakta/bin/python3.13
+15:00:47.713 - INFO - UTILS - dependency: tool=AMRFinderPlus, version=v4.2.7, path=/home/stas/miniconda3/envs/bakta/bin/amrfinder
+15:00:47.815 - INFO - UTILS - dependency: tool=Pyhmmer, version=v0.12.0, path=/home/stas/miniconda3/envs/bakta/bin/python3.13
+15:00:47.820 - INFO - UTILS - dependency: tool=Diamond, version=v2.1.24, path=/home/stas/miniconda3/envs/bakta/bin/diamond
+15:00:48.477 - INFO - UTILS - dependency: tool=Blastn, version=v2.17.0, path=/home/stas/miniconda3/envs/bakta/bin/blastn
+15:00:49.378 - INFO - UTILS - dependency: tool=pyCirclize, version=v1.10.1, path=/home/stas/miniconda3/envs/bakta/bin/python3.13
+15:00:49.407 - INFO - FASTA - imported: id=NODE_1_length_29907_cov_150.822528||full, length=29268, description=, genomic=True, dna=True
+15:00:49.408 - INFO - MAIN - imported sequences=1
+15:00:49.408 - INFO - UTILS - qc: revised sequence: id=contig_1, orig-id=NODE_1_length_29907_cov_150.822528||full, type=contig, complete=False, topology=linear, name=, description='[gcode=11] [topology=linear]', orig-description=''
+15:00:49.409 - INFO - FASTA - write genome sequences: path=/tmp/tmpcox0cx5t/sequences.fna, description=False, wrap=False
+15:00:49.640 - INFO - T_RNA - predicted=0
+15:00:49.649 - INFO - TM_RNA - predicted=0
+15:00:49.683 - INFO - R_RNA - predicted=0
+15:00:51.457 - INFO - NC_RNA - predicted=0
+15:00:51.926 - INFO - NC_RNA_REGION - predicted=0
+15:00:51.936 - INFO - CRISPR - predicted=0
+15:00:51.937 - INFO - CDS - create prodigal training info object: meta=False, closed=True
+15:00:51.966 - INFO - CDS - seq=contig_1, start=1, stop=1260, strand=-, frame=1, truncated=no, start-type=ATG, RBS-motif=TAAACG
+15:00:51.966 - INFO - CDS - seq=contig_1, start=1275, stop=1640, strand=-, frame=2, truncated=no, start-type=ATG, RBS-motif=TAAACG
+15:00:51.967 - INFO - CDS - seq=contig_1, start=1647, stop=1778, strand=-, frame=2, truncated=no, start-type=ATG, RBS-motif=None
+15:00:51.967 - INFO - CDS - seq=contig_1, start=1775, stop=2140, strand=-, frame=3, truncated=no, start-type=ATG, RBS-motif=TAAACG
+15:00:51.967 - INFO - CDS - seq=contig_1, start=2147, stop=2332, strand=-, frame=3, truncated=no, start-type=ATG, RBS-motif=TAA
+15:00:51.968 - INFO - CDS - seq=contig_1, start=2343, stop=3011, strand=-, frame=2, truncated=no, start-type=ATG, RBS-motif=TAA
+15:00:51.968 - INFO - CDS - seq=contig_1, start=3192, stop=3353, strand=+, frame=3, truncated=no, start-type=ATG, RBS-motif=AATCG
+15:00:51.968 - INFO - CDS - seq=contig_1, start=3314, stop=4141, strand=-, frame=3, truncated=no, start-type=ATG, RBS-motif=TAAACG
+15:00:51.969 - INFO - CDS - seq=contig_1, start=4150, stop=7971, strand=-, frame=1, truncated=no, start-type=ATG, RBS-motif=TAAACG
+15:00:51.969 - INFO - CDS - seq=contig_1, start=7979, stop=15766, strand=-, frame=3, truncated=no, start-type=ATG, RBS-motif=TAGAC
+15:00:51.969 - INFO - CDS - seq=contig_1, start=16051, stop=29217, strand=-, frame=1, truncated=no, start-type=TTG, RBS-motif=ACG
+15:00:51.970 - INFO - CDS - seq=contig_1, start=1, stop=1260, strand=-, nt=[ATGTCTGATA..TCAGGCCTAA]
+15:00:51.970 - INFO - CDS - seq=contig_1, start=1275, stop=1640, strand=-, nt=[ATGAAATTTC..TTTCATCTAA]
+15:00:51.970 - INFO - CDS - seq=contig_1, start=1647, stop=1778, strand=-, nt=[ATGATTGAAC..TCACGCCTAA]
+15:00:51.971 - INFO - CDS - seq=contig_1, start=1775, stop=2140, strand=-, nt=[ATGAAAATTA..GACAGAATGA]
+15:00:51.971 - INFO - CDS - seq=contig_1, start=2147, stop=2332, strand=-, nt=[ATGTTTCATC..GATTGATTAA]
+15:00:51.971 - INFO - CDS - seq=contig_1, start=2343, stop=3011, strand=-, nt=[ATGGCAGATT..TGTACAGTAA]
+15:00:51.972 - INFO - CDS - seq=contig_1, start=3192, stop=3353, strand=+, nt=[ATGGCTAGTG..TTCATCATAA]
+15:00:51.972 - INFO - CDS - seq=contig_1, start=3314, stop=4141, strand=-, nt=[ATGGATTTGT..GCCTTTGTAA]
+15:00:51.972 - INFO - CDS - seq=contig_1, start=4150, stop=7971, strand=-, nt=[ATGTTTGTTT..TTACACATAA]
+15:00:51.972 - INFO - CDS - seq=contig_1, start=7979, stop=15766, strand=-, nt=[ATGGTACCAC..TAACAACTAA]
+15:00:51.973 - INFO - CDS - seq=contig_1, start=16051, stop=29217, strand=-, nt=[TTGCCTGTTT..TGCGGTGTAA]
+15:00:51.973 - INFO - CDS - predicted=11
+15:00:51.973 - INFO - CDS - discarded=0
+15:00:52.039 - INFO - ORF - discarded=0
+15:00:52.068 - INFO - UPS - looked-up=0
+15:00:52.069 - INFO - IPS - looked-up=0
+15:00:52.069 - INFO - ORF - write internal aa seqs: # seqs=11, path=/tmp/tmpcox0cx5t/cds.psc.faa
+15:10:30.592 - INFO - PSC - found: PSC=0, PSCC=0
+15:10:31.013 - INFO - PSC - looked-up=0
+15:10:31.148 - INFO - PSCC - looked-up=0
+15:10:31.311 - INFO - ORF - write internal aa seqs: # seqs=11, path=/tmp/tmpcox0cx5t/cds.expert.faa
+15:10:37.446 - INFO - EXPERT-AMRFINDER - found=0
+15:10:39.859 - INFO - EXPERT_AA_SEQ - found=0
+15:10:39.912 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=1, stop=1260, strand=-
+15:10:39.943 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=1275, stop=1640, strand=-
+15:10:39.954 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=1647, stop=1778, strand=-
+15:10:39.962 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=1775, stop=2140, strand=-
+15:10:39.973 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=2147, stop=2332, strand=-
+15:10:39.984 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=2343, stop=3011, strand=-
+15:10:39.986 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=3192, stop=3353, strand=+
+15:10:39.987 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=3314, stop=4141, strand=-
+15:10:39.994 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=4150, stop=7971, strand=-
+15:10:39.994 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=7979, stop=15766, strand=-
+15:10:39.994 - INFO - ANNOTATION - marked as hypothetical: seq=contig_1, start=16051, stop=29217, strand=-
+15:10:40.056 - INFO - ORF - write internal aa seqs: # seqs=11, path=/tmp/tmpcox0cx5t/cds.pseudo.candidates.faa
+15:21:28.863 - INFO - CDS - found: pseudogene-candidates=0
+15:21:30.703 - INFO - PSC - looked-up=0
+15:21:30.853 - INFO - PSCC - looked-up=0
+15:21:43.810 - INFO - CDS - pfam detected: seq=contig_1, start=7979, stop=15766, strand=-, pfam-id=PF13086.12, length=73, aa-start=1097, aa-stop=1160, aa-cov=0.0, hmm-cov=1.0, evalue=8.0e-14, bitscore=41.5, name=AAA_11
+15:21:43.907 - INFO - CDS - pfam detected: seq=contig_1, start=7979, stop=15766, strand=-, pfam-id=PF13087.12, length=173, aa-start=1260, aa-stop=1398, aa-cov=0.1, hmm-cov=1.0, evalue=1.1e-12, bitscore=37.4, name=AAA_12
+15:21:44.505 - INFO - CDS - pfam detected: seq=contig_1, start=7979, stop=15766, strand=-, pfam-id=PF13604.12, length=137, aa-start=1099, aa-stop=1230, aa-cov=0.1, hmm-cov=0.8, evalue=1.8e-09, bitscore=27.1, name=AAA_30
+15:22:31.537 - INFO - CDS - pfam detected: seq=contig_1, start=16051, stop=29217, strand=-, pfam-id=PF01661.27, length=117, aa-start=1041, aa-stop=1147, aa-cov=0.0, hmm-cov=1.0, evalue=2.6e-23, bitscore=71.8, name=Macro
+15:22:52.001 - INFO - CDS - pfam detected: seq=contig_1, start=7979, stop=15766, strand=-, pfam-id=PF13538.12, length=41, aa-start=1355, aa-stop=1392, aa-cov=0.0, hmm-cov=1.0, evalue=1.3e-09, bitscore=27.5, name=UvrD_C_2
+15:22:54.715 - INFO - CDS - predicted-pfams=5, CDS-w/-pfams=2
+15:22:57.484 - INFO - S_ORF - predicted=508
+15:23:06.430 - INFO - S_ORF - sORF filter: # valid=10, # discarded=498
+15:23:07.186 - INFO - ORF - discarded=0
+15:23:08.057 - INFO - UPS - looked-up=0
+15:23:08.106 - INFO - IPS - looked-up=0
+15:23:08.234 - INFO - ORF - write internal aa seqs: # seqs=10, path=/tmp/tmpcox0cx5t/sorf.faa
+15:23:09.569 - INFO - S_ORF - found=0
+15:23:09.569 - INFO - PSC - looked-up=0
+15:23:09.569 - INFO - PSCC - looked-up=0
+15:23:23.679 - INFO - ORI - predicted=0
+15:23:24.142 - INFO - ORI - predicted=0
+15:23:24.337 - INFO - UTILS - generated sequence tag prefix: prefix=CGEIENHCGN, length=10, MD5=C0E2E71C07EFCCDF6E5126BE427C306D
+15:23:24.345 - INFO - MAIN - selected features=11
+15:23:24.345 - INFO - UTILS - generated sequence tag prefix: prefix=CGEIEN, length=6, MD5=C0E2E71C07EFCCDF6E5126BE427C306D
+15:23:24.345 - INFO - MAIN - locus tag prefix=CGEIEN
+15:23:24.485 - INFO - UTILS - genome-size=29268
+15:23:24.486 - INFO - UTILS - GC=0.379
+15:23:26.896 - INFO - UTILS - N=0.000
+15:23:26.896 - INFO - UTILS - N50=29268
+15:23:26.897 - INFO - UTILS - N90=29268
+15:23:26.898 - INFO - UTILS - coding-ratio=0.982
+15:23:27.194 - INFO - TSV - write feature tsv: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.tsv
+15:23:27.659 - INFO - GFF - write features: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.gff3
+15:23:28.735 - INFO - INSDC - write GenBank: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.gbff
+15:23:29.757 - INFO - INSDC - write EMBL: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.embl
+15:23:29.889 - INFO - FASTA - write genome sequences: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.fna, description=True, wrap=True
+15:23:30.105 - INFO - FASTA - write feature nucleotide sequences: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.ffn
+15:23:30.183 - INFO - FASTA - write translated CDS/sORF: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.faa
+15:23:30.221 - INFO - TSV - write tsv: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.inference.tsv
+15:24:19.308 - INFO - TSV - write hypothetical tsv: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.hypotheticals.tsv
+15:24:19.311 - INFO - FASTA - write translated CDS/sORF: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.hypotheticals.faa
+15:24:19.419 - INFO - JSON - write JSON: path=/mnt/hgfs/SFTP/ITMO_genome_data_analysis/task_4/annotation_results/viral_contig.json
+15:24:20.047 - INFO - MAIN - removed tmp dir: /tmp/tmpcox0cx5t
