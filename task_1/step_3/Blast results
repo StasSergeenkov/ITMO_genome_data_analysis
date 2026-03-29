@@ -1,3 +1,2 @@
-Собственно, мы загрузили task_1/step_2/virsorter_output/final-viral-combined.fa файл в BLAST и получили, что этот контиг 
-NODE_1_length_29907_cov_150.822528 больше всего похож на Bat SARS-like coronavirus isolate bat-SL-CoVZC45
-[Отчет](https://www.ncbi.nlm.nih.gov/projects/msaviewer/?rid=WJ7WW7GK014&coloring=)
+Собственно, мы загрузили task_1/step_2/virsorter_output/final-viral-combined.fa файл в BLAST и получили, что этот контиг NODE_1_length_29907_cov_150.822528 больше всего похож на Bat SARS-like coronavirus isolate bat-SL-CoVZC45
+[Отчет] (https://www.ncbi.nlm.nih.gov/projects/msaviewer/?rid=WJ7WW7GK014&coloring=).
