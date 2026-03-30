@@ -96,4 +96,4 @@ Shell: bash 5.2.21
 CPU: Intel Xeon E3-1230 v6 (4) @ 3.504GHz
 Memory: 858MiB / 13678MiB_
 3. Вычисления для шага 3 выполнялись онлайн в [Standard Nucleotide BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)
-4. Вычисления для шага 5 выполнялись ондлайн в [Primer-BLAST ](https://www.ncbi.nlm.nih.gov/tools/primer-blast/)
+4. Вычисления для шага 5 выполнялись онлайн в [Primer-BLAST ](https://www.ncbi.nlm.nih.gov/tools/primer-blast/)
