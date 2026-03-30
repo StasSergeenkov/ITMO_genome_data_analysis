@@ -3,7 +3,7 @@
 Шаг 0 не выполнялся в связи с отсутствием технической возможности осуществления сборки сырых данных.
 
 ## Шаг 1
-Выполнялся в веб-интерфейсе Galaxy
+Выполнялся локально в QUAST 5.3.0. 
 
 ## Шаг 2
 Выполнялся в точности с описанием в задании.
@@ -16,7 +16,7 @@ samtools faidx spades_scaffolds.fasta
 more spades_scaffolds.fasta.fai  | awk '$2 >= 3000 {print $1}' | xargs samtools faidx spades_scaffolds.fasta > 3000.fa
 ```
 
-Второе - последующая обработка файла выполнялась в virsorter. 
+Второе - последующая обработка файла выполнялась в virsorter 2.2.4. 
 ```shell
 virsorter run \
   -w /home/stass/ITMO_genome_data_analysis/virsorter_output \
@@ -72,7 +72,13 @@ gene: 9
 
 
 # Платформы
-1. Вычисления для шага 1 выполнялись онлайн, иснтрумент Galaxy
+1. Вычисления для шага 1 и 4 выполнялись локально:
+_OS: macOS Big Sur 10.16 23G80 arm64
+Host: MacBookAir10,1
+Kernel: 23.6.0
+Shell: zsh 5.9
+CPU: Apple M1
+Memory: 1502MiB / 8192MiB_
 2. Вычисления для шага 2 выполнялись локально:
 _OS: Ubuntu 24.04.4 LTS x86_64
 Host: VMware Virtual Platform None
@@ -81,12 +87,4 @@ Shell: bash 5.2.21
 CPU: Intel Xeon E3-1230 v6 (4) @ 3.504GHz
 Memory: 858MiB / 13678MiB_
 3. Вычисления для шага 3 выполнялись онлайн в [Standard Nucleotide BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)
-4. Вычисления для шага 4 выполнялись локально:
-   _OS: macOS Big Sur 10.16 23G80 arm64
-Host: MacBookAir10,1
-Kernel: 23.6.0
-Shell: zsh 5.9
-CPU: Apple M1
-Memory: 1502MiB / 8192MiB_
-   
-5. Вычисления для шага 5 выполнялись ондлайн в [Primer-BLAST ](https://www.ncbi.nlm.nih.gov/tools/primer-blast/)
+4. Вычисления для шага 5 выполнялись ондлайн в [Primer-BLAST ](https://www.ncbi.nlm.nih.gov/tools/primer-blast/)
