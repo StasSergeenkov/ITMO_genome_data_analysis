@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Session genome="\\wsl.localhost\Ubuntu\home\stass\ITMO_genome_data_analysis\HW2\GCF_000005845.2_ASM584v2_genomic.fna" locus="NC_000913.3:4390733-4390773" version="8">
+    <Resources>
+        <Resource path="\\wsl.localhost\Ubuntu\home\stass\ITMO_genome_data_analysis\HW2\VarScan_results.vcf" type="vcf"/>
+        <Resource path="\\wsl.localhost\Ubuntu\home\stass\ITMO_genome_data_analysis\HW2\alignment_sorted.bam" type="bam"/>
+        <Resource path="\\wsl.localhost\Ubuntu\home\stass\ITMO_genome_data_analysis\HW2\GCF_000005845.2_ASM584v2_genomic.gff" type="gff"/>
+    </Resources>
+    <Panel height="62" name="DataPanel" width="1422">
+        <Track attributeKey="VarScan_results.vcf" clazz="org.broad.igv.variant.VariantTrack" displayMode="EXPANDED" fontSize="10" groupByStrand="false" id="\\wsl.localhost\Ubuntu\home\stass\ITMO_genome_data_analysis\HW2\VarScan_results.vcf" name="VarScan_results.vcf" siteColorMode="ALLELE_FREQUENCY" visible="true"/>
+    </Panel>
+    <Panel height="560" name="Panel1775405475691" width="1422">
+        <Track attributeKey="alignment_sorted.bam Coverage" autoScale="true" clazz="org.broad.igv.sam.CoverageTrack" fontSize="10" id="\\wsl.localhost\Ubuntu\home\stass\ITMO_genome_data_analysis\HW2\alignment_sorted.bam_coverage" name="alignment_sorted.bam Coverage" snpThreshold="0.2" visible="true">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="25.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="alignment_sorted.bam Junctions" autoScale="true" clazz="org.broad.igv.sam.SpliceJunctionTrack" fontSize="10" groupByStrand="false" height="60" id="\\wsl.localhost\Ubuntu\home\stass\ITMO_genome_data_analysis\HW2\alignment_sorted.bam_junctions" maxdepth="50" name="alignment_sorted.bam Junctions" visible="false"/>
+        <Track attributeKey="alignment_sorted.bam" clazz="org.broad.igv.sam.AlignmentTrack" color="185,185,185" displayMode="EXPANDED" experimentType="OTHER" fontSize="10" id="\\wsl.localhost\Ubuntu\home\stass\ITMO_genome_data_analysis\HW2\alignment_sorted.bam" name="alignment_sorted.bam" visible="true">
+            <RenderOptions duplicatesOption="FILTER" viewPairs="true"/>
+        </Track>
+    </Panel>
+    <Panel height="61" name="FeaturePanel" width="1422">
+        <Track attributeKey="Reference sequence" clazz="org.broad.igv.track.SequenceTrack" fontSize="10" id="Reference sequence" name="Reference sequence" sequenceTranslationStrandValue="+" shouldShowTranslation="false" visible="true"/>
+        <Track attributeKey="GCF_000005845.2_ASM584v2_genomic.gff" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="\\wsl.localhost\Ubuntu\home\stass\ITMO_genome_data_analysis\HW2\GCF_000005845.2_ASM584v2_genomic.gff" name="GCF_000005845.2_ASM584v2_genomic.gff" visible="true"/>
+    </Panel>
+    <PanelLayout dividerFractions="0.10372771474878444,0.893030794165316"/>
+    <HiddenAttributes>
+        <Attribute name="DATA FILE"/>
+        <Attribute name="DATA TYPE"/>
+        <Attribute name="NAME"/>
+    </HiddenAttributes>
+</Session>
