@@ -115,7 +115,7 @@ snpEff ann -c snpEff.config k12 VarScan_results.vcf > VarScan_results_annotated.
 ```
 
 ## Немного биологических выводов
-_подробнее в полном тексте_
+_подробнее в полном тексте [тут](https://docs.google.com/document/d/1Gb7IVH5blWluxYC6O1pPAB5-0pEbQXmNfqAw1wCxKSM/edit?usp=sharing)_
 
 | № | Ген | Название гена | Механизм | Примечание |
 |---|---|---|---|---|
