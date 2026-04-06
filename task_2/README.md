@@ -1,3 +1,6 @@
+# Задание 2
+В этом файле представлено краткое описание последовательности действий и технической стороны вопроса. [Полная версия отчета доступна по ссылке](https://docs.google.com/document/d/1Gb7IVH5blWluxYC6O1pPAB5-0pEbQXmNfqAw1wCxKSM/edit?usp=sharing).
+
 ## Шаги 1-2
 Скачанные риды и референсный геном просмотрены вручную.
 Ридов КОЛИЧЕСТВО СТРОК/4
@@ -110,3 +113,19 @@ snpEff build -genbank -v -c snpEff.config k12
 ```
 snpEff ann -c snpEff.config k12 VarScan_results.vcf > VarScan_results_annotated.vcf
 ```
+
+# Платформы
+1. Вычисления для шагов 1-4 выполнялись локально:
+_OS: macOS Big Sur 10.16 23G80 arm64
+Host: MacBookAir10,1
+Kernel: 23.6.0
+Shell: zsh 5.9
+CPU: Apple M1
+Memory: 1502MiB / 8192MiB_
+
+2. Вычисления для шагов 5-8 выполнялись локально:
+_OS: Ubuntu 24.04.4 LTS on Windows 10 x86_64
+Kernel: 6.6.87.2-microsoft-standard-WSL2
+Shell: bash 5.2.21
+CPU: Intel Ultra 9 285H (16) @ 3.686GHz
+Memory: 408MiB / 15672MiB_
