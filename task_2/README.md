@@ -3,18 +3,18 @@
 ## Шаг 6
 
 Посредством samtools создадим mpileup файл, который позволит в дальнейшем найти варианты:
-```
+```shell
 samtools mpileup -f GCF_000005845.2_ASM584v2_genomic.fna alignment_sorted.bam > my.mpileup
 ```
 Variant Calling провели следующим образом на основе файла, полученного ранее:
-```
+```shell
 varscan mpileup2snp my.mpileup --min-var-freq 0.2 --variants --output-vcf 1 > VarScan_results.vcf
 ```
 > [!NOTE]
 > Параметр --min-var-freq в 20% выбран на основе анализа литературных данных. Такое значение позволит получить максимум информации, при этом позволит избежать попадания в итоговую выборку ложноположительных результатов, возникших, например, в результате ошибок секвенирования.
 
 Проконтролировали содержимое файла:
-```
+```shell
 # Первые 20 строк файла (включая заголовки)
 head -n 20 VarScan_results.vcf
 
@@ -36,8 +36,29 @@ grep -v "^##" VarScan_results.vcf | head -n 10
 | 3 | A | G | 852 762 | no type | - | - |
 | 4 | A | C | 3 535 147 | missense | Tyrosine-Serine | gene-b3404 |
 | 5 | G | T | 4 390 754 | missense | Glycine-Cysteine | gene-b4161 |
-| 6 | G | A | 1 905 761 | missense | Glycine-Aspartic | gene-b1821 |
 
 
 ## Шаг 8
 
+Для автоматической аннотации выявленных мутаций (тип мутации, влияние на белок, расположение относительно генов) использовали SnpEff.
+SnpEff требует структуру каталогов и конфигурационный файл. В рабочем каталоге создали необходимые файлы и подкаталоги:
+
+```shell
+# Конфиг
+echo "k12.genome : ecoli_K12" > snpEff.config
+
+# Подкаталог для базы
+mkdir -p data/k12
+
+# GenBank-файл референса, переименовали в genes.gbk
+cp GCF_000005845.2_ASM584v2_genomic.gbff data/k12/genes.gbk
+
+# Построение базы данных
+snpEff build -genbank -v -c snpEff.config k12
+```
+
+Запустили SnpEff в режиме ann (annotation) на файле VarScan_results.vcf, полученном на шаге 7:
+
+```
+snpEff ann -c snpEff.config k12 VarScan_results.vcf > VarScan_results_annotated.vcf
+```
