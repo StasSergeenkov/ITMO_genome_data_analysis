@@ -51,7 +51,9 @@ k = 31
 | Heterozygosity           | 0.374961%      | 0.388117%      |
 | Genome Haploid Length    | 4,798,156 bp   | 4,814,419 bp   |
 | Genome Repeat Length     | 81,618 bp      | 81,894 bp      |
-| Genome Unique Length     | 4,716,538 bp   | 4,732,524 bp   | 
+| Genome Unique Length     | 4,716,538 bp   | 4,732,524 bp   |
+| Model Fit                | 95.0208%       | 95.7264%       |
+| Read Error Rate          | 0.0941036%     | 0.0941036%     |
   
 ## Шаг 3
 Сборка генома E. coli X из парных ридов выполнялась в SPAdes v4.2.0:
