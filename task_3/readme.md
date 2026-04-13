@@ -218,15 +218,15 @@ GenBank Accession Number: NC_000913.3
 
 
 
-## Шаг 9. Детекция устойчивости к антибиотикам (ResFinder)
+## Шаг 9
 
-Загружаем файл **`scaffolds.fasta`** из гибридной сборки (шаг 4) на веб-сервер ResFinder.
+Загрузили файл scaffolds.fasta из гибридной сборки (шаг 4) на веб-сервер ResFinder.
 
 - На странице http://genepi.food.dtu.dk/resfinder выбираем «Choose File» → указываем `scaffolds.fasta`.
-- В поле «Select Antimicrobial configuration» выбираем **«All»**.
+- В поле «Select Antimicrobial configuration» выбираем «All».
 - Нажимаем кнопку «Submit».
 
-Аналогично загружаем референсный геном (`55989.fasta`) для сравнения.
+Аналогично загружаем референсный геном (55989.fasta) для сравнения.
 
 Результаты устойчивости:
 - E. coli X устойчив к следующим антибиотикам: [ЗДЕСЬ ДОБАВИТЬ ДАННЫЕ]
