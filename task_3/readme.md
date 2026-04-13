@@ -21,36 +21,37 @@ fastqc SRR292678_1.fastq SRR292678_2.fastq -o fastqc_reports/
 
 
 ## Шаг 2
+По техническим причинам мы не смогли воспользоваться jellyfish, поэтому пользовалась dsk - ссылка на статью лежит [здесь](https://academic.oup.com/bioinformatics/article/29/5/652/253092)
+Ввели следующие команды:
+```dsk -file SRR292678sub_S1_L001_R1_001.fastq -kmer-size 31 -abundance-min 1 -histo 1 -out k31```
+```dsk -file SRR292678sub_S1_L001_R2_001.fastq -kmer-size 31 -abundance-min 1 -histo 1 -out k31```
+Для первого файла результаты, визуализированные с помошью GenomeScope version 1.0: 
+![resultpic](http://genomescope.org/user_data/somjLcek4ZvYnMCaOOVy/plot.png)
+![resultpic](http://genomescope.org/user_data/somjLcek4ZvYnMCaOOVy/plot.log.png)
+k = 31
 
-Оцениваем распределение k‑мер в данных с помощью Jellyfish (k=31).  
-Это позволяет определить пик покрытия и приблизительный размер генома до сборки.
+| property                 | min            | max            |
+|--------------------------|----------------|----------------|
+| Heterozygosity           | 0.364525%      | 0.378321%      |
+| Genome Haploid Length    | 4,807,028 bp   | 4,823,888 bp   |
+| Genome Repeat Length     | 69,761 bp      | 70,006 bp      |
+| Genome Unique Length     | 4,737,267 bp   | 4,753,882 bp   |
+| Model Fit                | 94.8965%       | 95.6352%       |
+| Read Error Rate          | 0.0780987%     | 0.0780987%     |       
 
-```shell
-# Подсчёт k-мер (k=31, игнорируем направление, размер хеш-таблицы ~5M)
-jellyfish count -m 31 -C -s 5M -o kmers_31.jf SRR292678_1.fastq SRR292678_2.fastq
+Для второго файла: GenomeScope version 1.0
+![resultpic](http://genomescope.org/user_data/FgGuLrDrKVd4wUJqc54M/plot.png)
+![resultpic](<img width="2000" height="2000" alt="image" src="https://github.com/user-attachments/assets/4a9efceb-18a5-4e74-9f52-cf2d84eb18ed" />)
 
-# Построение гистограммы
-jellyfish histo kmers_31.jf > kmers_31.histo
-```
 
-Полученный файл `kmers_31.histo` содержит два столбца:  
-- слева – глубина k‑мера (frequency),  
-- справа – количество k‑меров с такой глубиной.
+k = 31
 
-Визуализируем гистограмму с помощью онлайн-инструмента GenomeScope (http://genomescope.org/).
-Нашли пик (`M`) – значение глубины, соответствующее максимальному количеству k‑меров.
-
-Зная пик, оцениваем размер генома:
-
-```
-N = (M * L) / (L - K + 1)
-Genome_size = T / N
-```
-
-где:  
-- `L` – средняя длина рида (определяется из FastQC),  
-- `K` = 31,   
-- `T` – общее число оснований во всех ридах (количество ридов × `L`).
+| property                 | min            | max            |
+|--------------------------|----------------|----------------|
+| Heterozygosity           | 0.374961%      | 0.388117%      |
+| Genome Haploid Length    | 4,798,156 bp   | 4,814,419 bp   |
+| Genome Repeat Length     | 81,618 bp      | 81,894 bp      |
+| Genome Unique Length     | 4,716,538 bp   | 4,732,524 bp   | 
   
 ## Шаг 3
 Сборка генома E. coli X из парных ридов выполнялась в SPAdes v4.2.0:
