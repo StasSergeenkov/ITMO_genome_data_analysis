@@ -23,8 +23,11 @@ fastqc SRR292678_1.fastq SRR292678_2.fastq -o fastqc_reports/
 ## Шаг 2
 По техническим причинам мы не смогли воспользоваться jellyfish, поэтому пользовалась dsk - ссылка на статью лежит [здесь](https://academic.oup.com/bioinformatics/article/29/5/652/253092)
 Ввели следующие команды:
+
 ```dsk -file SRR292678sub_S1_L001_R1_001.fastq -kmer-size 31 -abundance-min 1 -histo 1 -out k31```
+
 ```dsk -file SRR292678sub_S1_L001_R2_001.fastq -kmer-size 31 -abundance-min 1 -histo 1 -out k31```
+
 Для первого файла результаты, визуализированные с помошью GenomeScope version 1.0: 
 ![resultpic](http://genomescope.org/user_data/somjLcek4ZvYnMCaOOVy/plot.png)
 ![resultpic](http://genomescope.org/user_data/somjLcek4ZvYnMCaOOVy/plot.log.png)
