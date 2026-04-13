@@ -40,7 +40,7 @@ k = 31
 | Read Error Rate          | 0.0780987%     | 0.0780987%     |       
 
 Для второго файла: GenomeScope version 1.0
-<img src="http://genomescope.org/user_data/FgGuLrDrKVd4wUJqc54M/plot.png" alt="resultpic" width="500" />
+![resultpic](http://genomescope.org/user_data/FgGuLrDrKVd4wUJqc54M/plot.png)
 ![resultpic](<img width="2000" height="2000" alt="image" src="https://github.com/user-attachments/assets/4a9efceb-18a5-4e74-9f52-cf2d84eb18ed" />)
 
 
