@@ -48,6 +48,8 @@ barrnap --kingdom bac \
         scaffolds.fna > rrna_coords.gff
 ```
 В выходном файле выбрана одна 16s и использована для выраванивания посредством BLAST на установленных заданием условиях.
+Штамм: Escherichia coli str. K-12 substr. MG1655
+GenBank Accession Number: NC_000913.3
 
 # Платформы
 1. Вычисления для шагов 1-4 выполнялись локально:
