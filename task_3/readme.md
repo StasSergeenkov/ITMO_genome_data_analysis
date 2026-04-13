@@ -47,9 +47,10 @@ barrnap --kingdom bac \
         --outseq rrna.fasta \
         scaffolds.fna > rrna_coords.gff
 ```
-В выходном файле выбрана одна 16s и использована для выраванивания посредством BLAST на установленных заданием условиях.
-Штамм: Escherichia coli str. K-12 substr. MG1655
-GenBank Accession Number: NC_000913.3
+В выходном файле выбрана одна 16s и использована для выраванивания посредством BLAST на установленных заданием условиях.  
+Штамм: Escherichia coli str. K-12 substr. MG1655  
+GenBank Accession Number: NC_000913.3  
+Референсная последовательность сборки указанного организма находится (вот тут)[task_3/step_6/55989.fasta]
 
 # Платформы
 1. Вычисления для шагов 1-4 выполнялись локально:
