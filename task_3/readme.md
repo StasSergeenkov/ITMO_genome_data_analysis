@@ -76,8 +76,48 @@ quast.py \
 | Только Illumina (шаг 3) | 105346 | 206 |
 | Гибридная (Illumina + PacBio) | 816412 | 20 |
 
+## Шаг 5
 
+После сборки генома _E. coli X_ была проведена аннотация — поиск генов и других функциональных элементов. Для этого использовались две программы: Prokka и Bakta. 
 
+### Аннотация с помощью Prokka
+
+Prokka выполняет предсказание генов (в т.ч. tRNA, rRNA) и функциональную аннотацию через BLAST против базы RefSeq. Важное замечание из FAQ: для совместимости с Mauve (инструмент сравнительной геномики) необходимо переименовать контиги, чтобы они имели короткие имена без спецсимволов. Это сделано параметром `--centre XXX`.
+
+Запуск на файле scaffolds.fasta из шага 4 выполнен командой:
+
+```bash
+prokka --outdir annotation --prefix bacteria --genus Escherichia --species coli  --compliant --centre XXX scaffolds.fasta
+```
+
+### Аннотация с помощью Bakta
+
+Для совместимости с Mauwe потребовалось предварительно переименовать контиги в короткие имена (`contig1`, `contig2`…).
+
+Переименование контигов выполнено командой (во временный файл):
+
+```bash
+awk '/^>/ {print ">contig" ++i; next} {print}' scaffolds.fasta > /tmp/scaffolds_renamed.fasta
+```
+
+Запуск Bakta с указанием рода _Escherichia_ и использованием 4 потоков:
+
+```bash
+bakta --db /home/stas/bakta_db/db \
+      --output /home/stas/annotation_results \
+      --genus Escherichia \
+      --threads 4 \
+      /tmp/scaffolds_renamed.fasta
+```
+
+После завершения все выходные файлы скопированы в рабочую директорию, а временная папка очищена (простите сервер дурак - права не права):
+
+```bash
+cp -r /home/stas/annotation_results/* /mnt/hgfs/SFTP/ITMO_genome_data_analysis/HW3_task_5/
+rm -rf /home/stas/annotation_results/*
+```
+
+**В дальнейшем анализе использовался результат аннотации Prokka (для соответствия заданию)
 
 ## Шаг 6
 Выполним выделение 16s из генома посредством barrnap:
