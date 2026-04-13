@@ -1,0 +1,63 @@
+Aminoglycoside
+Resistance gene	Identity	Alignment Length/Gene Length	Coverage	Position in reference	Contig	Position in contig	Phenotype	Accession no.
+aph(6)-Id	100.00	837/837	100.0	1..837	NODE_2_length_968098_cov_80.423796	328511..329347	Streptomycin	M28829
+aph(3'')-Ib	100.00	804/804	100.0	1..804	NODE_2_length_968098_cov_80.423796	329347..330150	Streptomycin	AF321551
+
+Beta-lactam
+Resistance gene	Identity	Alignment Length/Gene Length	Coverage	Position in reference	Contig	Position in contig	Phenotype	Accession no.
+blaTEM-1B	100.00	861/861	100.0	1..861	NODE_2_length_968098_cov_80.423796	334243..335103	Amoxicillin, Ampicillin, Cephalothin, Piperacillin, Ticarcillin	AY458016
+blaCTX-M-15	100.00	876/876	100.0	1..876	NODE_9_length_88529_cov_76.010772	19012..19887	Amoxicillin, Ampicillin, Aztreonam, Cefepime, Cefotaxime, Ceftazidime, Ceftriaxone, Piperacillin, Ticarcillin	AY044436
+blaTEM-1B	100.00	861/861	100.0	1..861	NODE_9_length_88529_cov_76.010772	15330..16190	Amoxicillin, Ampicillin, Cephalothin, Piperacillin, Ticarcillin	AY458016
+
+Colistin
+No hit found
+
+Fosfomycin
+No hit found
+
+Fusidic Acid
+No hit found
+
+MLS - Macrolide, Lincosamide and Streptogramin B
+No hit found
+
+Misc
+No hit found
+
+Nitroimidazole
+No hit found
+
+Oxazolidinone
+No hit found
+
+Phenicol
+No hit found
+
+Fluoroquinolone
+No hit found
+
+Rifampicin
+No hit found
+
+Sulphonamide
+Resistance gene	Identity	Alignment Length/Gene Length	Coverage	Position in reference	Contig	Position in contig	Phenotype	Accession no.
+sul2	100.00	816/816	100.0	1..816	NODE_2_length_968098_cov_80.423796	330211..331026	Sulfamethoxazole	HQ840942
+sul1	100.00	761/828	91.90821256038647	1..761	NODE_2_length_968098_cov_80.423796	336360..337120	Sulfamethoxazole	AY522923
+sul1	100.00	761/840	90.5952380952381	1..761	NODE_2_length_968098_cov_80.423796	336360..337120	Sulfamethoxazole	AY115475
+sul1	100.00	761/882	86.28117913832199	1..761	NODE_2_length_968098_cov_80.423796	336360..337120	Sulfamethoxazole	DQ914960
+sul1	100.00	761/840	90.5952380952381	1..761	NODE_2_length_968098_cov_80.423796	336360..337120	Sulfamethoxazole	U12338
+
+Tetracycline
+Resistance gene	Identity	Alignment Length/Gene Length	Coverage	Position in reference	Contig	Position in contig	Phenotype	Accession no.
+tet(A)	100.00	1200/1200	100.0	1..1200	NODE_2_length_968098_cov_80.423796	317109..318308	Doxycycline, Tetracycline	AJ517790
+
+Trimethoprim
+Resistance gene	Identity	Alignment Length/Gene Length	Coverage	Position in reference	Contig	Position in contig	Phenotype	Accession no.
+dfrA7	100.00	474/474	100.0	1..474	NODE_2_length_968098_cov_80.423796	337691..338164	Trimethoprim	AB161450
+
+Glycopeptide
+No hit found
+
+Pseudomonic Acid
+No hit found
+
