@@ -38,6 +38,46 @@ quast.py /home/stass/ITMO_genome_data_analysis/HW3/step_3/contigs.fasta \
 | N50                      | 105346   | 105346    |
 | L50                      | 15       | 15        |
 
+## Шаг 4
+Для оценки влияния длинных ридов на сборку генома *E. coli* X мы использовали гибридный режим ассемблера SPAdes, добавив к коротким парным ридам (библиотека SRR292678) библиотеку длинных ридов PacBio SMRT SRR1980037 со средней длиной фрагмента ~20 000 bp.
+
+Сборка выполнялась командой:
+
+```bash
+spades.py \
+  -1 /home/stass/ITMO_genome_data_analysis/HW3/row_data/SRR292678sub_S1_L001_R1_001.fastq \
+  -2 /home/stass/ITMO_genome_data_analysis/HW3/row_data/SRR292678sub_S1_L001_R2_001.fastq \
+  --pacbio /home/stass/ITMO_genome_data_analysis/HW3/row_data/SRR1980037.fastq \
+  -o /home/stass/ITMO_genome_data_analysis/HW3/step_4 \
+  -t 16
+```
+
+SPAdes выполнил коррекцию ошибок в коротких ридах и затем собрал контиги и скаффолды, используя длинные риды для разрешения повторяющихся областей.
+
+Для объективной оценки улучшения мы сравнили две сборки:
+- Только короткие риды (результат шага 3)
+- Гибридная сборка (короткие + PacBio)
+
+QUAST запускался с минимальной длиной контига 500 bp:
+
+```bash
+quast.py \
+  /home/stass/ITMO_genome_data_analysis/HW3/step_3/contigs.fasta \
+  /home/stass/ITMO_genome_data_analysis/HW3/step_4/contigs.fasta \
+  -o /home/stass/ITMO_genome_data_analysis/HW3/step_4/quast_comparison \
+  --min-contig 500 \
+  -t 16
+```
+
+Отчёт в формате HTML был открыт в браузере, ключевые метрики приведены в таблице:
+
+| Сборка | N50 (bp) | Число контигов (≥500 bp) |
+|--------|----------|---------------------------|
+| Только Illumina (шаг 3) | 105346 | 206 |
+| Гибридная (Illumina + PacBio) | 816412 | 20 |
+
+
+
 
 ## Шаг 6
 Выполним выделение 16s из генома посредством barrnap:
@@ -50,7 +90,7 @@ barrnap --kingdom bac \
 В выходном файле выбрана одна 16s и использована для выраванивания посредством BLAST на установленных заданием условиях.  
 Штамм: Escherichia coli str. K-12 substr. MG1655  
 GenBank Accession Number: NC_000913.3  
-Референсная последовательность сборки указанного организма находится (вот тут)[task_3/step_6/55989.fasta]
+Референсная последовательность сборки указанного организма находится [вот тут](task_3/step_6/55989.fasta)
 
 # Платформы
 1. Вычисления для шагов 1-4 выполнялись локально:
