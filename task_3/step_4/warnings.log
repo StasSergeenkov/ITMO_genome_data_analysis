@@ -1,0 +1,4 @@
+
+=== Error correction and assembling warnings:
+ * 0:04:21.084    86M / 6578M WARN    General                 (launcher.cpp              : 181)   Your data seems to have high uniform coverage depth. It is strongly recommended to use --isolate option.
+======= Warnings saved to /home/stass/ITMO_genome_data_analysis/HW3/step_4/warnings.log
