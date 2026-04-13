@@ -133,7 +133,7 @@ GenBank Accession Number: NC_000913.3
 Референсная последовательность сборки указанного организма находится [вот тут](task_3/step_6/55989.fasta)
 
 # Платформы
-1. Вычисления для шагов 1-4 выполнялись локально:
+1. Вычисления для шагов 1-2, 7-10 и 5 (Prokka) выполнялись локально:
 _OS: macOS Big Sur 10.16 23G80 arm64
 Host: MacBookAir10,1
 Kernel: 23.6.0
@@ -141,9 +141,16 @@ Shell: zsh 5.9
 CPU: Apple M1
 Memory: 1502MiB / 8192MiB_
 
-2. Вычисления для шагов 5-8 выполнялись локально:
+2. Вычисления для шагов 3, 4, 6 выполнялись локально:
 _OS: Ubuntu 24.04.4 LTS on Windows 10 x86_64
 Kernel: 6.6.87.2-microsoft-standard-WSL2
 Shell: bash 5.2.21
 CPU: Intel Ultra 9 285H (16) @ 3.686GHz
-Memory: 408MiB / 15672MiB_
+Memory: 408MiB / 30354MiB_
+
+3. Вычисления для шага 5 (Bakta) выполнялись локально:
+_OS: Ubuntu 24.04.4 LTS x86_64
+Kernel: 6.8.0-107-generic
+Shell: bash 5.2.21
+CPU: Intel Xeon E3-1230 v6 (4) @ 3.504GHz
+Memory: 355MiB / 13678MiB_
