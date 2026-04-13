@@ -1,0 +1,73 @@
+/home/stass/miniconda3/envs/quast/bin/quast.py /home/stass/ITMO_genome_data_analysis/HW3/step_3/contigs.fasta /home/stass/ITMO_genome_data_analysis/HW3/step_3/scaffolds.fasta -o quast_results
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-debian-trixie-sid (linux_64)
+  Python version: 3.6.15
+  CPUs number: 16
+
+Started: 2026-04-13 19:18:29
+
+Logging to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/quast.log
+NOTICE: Maximum number of threads is set to 4 (use --threads option to set it manually)
+
+CWD: /home/stass/ITMO_genome_data_analysis/HW3/step_3
+Main parameters: 
+  MODE: default, threads: 4, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Contigs:
+  Pre-processing...
+  1  /home/stass/ITMO_genome_data_analysis/HW3/step_3/contigs.fasta ==> contigs
+  2  /home/stass/ITMO_genome_data_analysis/HW3/step_3/scaffolds.fasta ==> scaffolds
+
+2026-04-13 19:18:30
+Running Basic statistics processor...
+  Contig files: 
+    1  contigs
+    2  scaffolds
+  Calculating N50 and L50...
+    1  contigs, N50 = 105346, L50 = 15, Total length = 5244705, GC % = 50.54, # N's per 100 kbp =  0.00
+    2  scaffolds, N50 = 105346, L50 = 15, Total length = 5253645, GC % = 50.51, # N's per 100 kbp =  32.23
+  Drawing Nx plot...
+    saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/basic_stats/GC_content_plot.pdf
+  Drawing contigs GC content plot...
+    saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/basic_stats/contigs_GC_content_plot.pdf
+  Drawing scaffolds GC content plot...
+    saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/basic_stats/scaffolds_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/basic_stats/coverage_histogram.pdf
+  Drawing contigs coverage histogram (bin size: 1x)...
+    saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/basic_stats/contigs_coverage_histogram.pdf
+  Drawing scaffolds coverage histogram (bin size: 1x)...
+    saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/basic_stats/scaffolds_coverage_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-04-13 19:18:32
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2026-04-13 19:18:32
+RESULTS:
+  Text versions of total report are saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/report.html
+  PDF version (tables and plots) is saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/report.pdf
+  Icarus (contig browser) is saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/icarus.html
+  Log is saved to /home/stass/ITMO_genome_data_analysis/HW3/step_3/quast_results/quast.log
+
+Finished: 2026-04-13 19:18:32
+Elapsed time: 0:00:03.066118
+NOTICEs: 2; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
