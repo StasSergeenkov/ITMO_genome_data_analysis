@@ -39,6 +39,16 @@ quast.py /home/stass/ITMO_genome_data_analysis/HW3/step_3/contigs.fasta \
 | L50                      | 15       | 15        |
 
 
+## Шаг 6
+Выполним выделение 16s из генома посредством barrnap:
+```shell
+barrnap --kingdom bac \
+        --threads 4 \
+        --outseq rrna.fasta \
+        scaffolds.fna > rrna_coords.gff
+```
+В выходном файле выбрана одна 16s и использована для выраванивания посредством BLAST на установленных заданием условиях.
+
 # Платформы
 1. Вычисления для шагов 1-4 выполнялись локально:
 _OS: macOS Big Sur 10.16 23G80 arm64
