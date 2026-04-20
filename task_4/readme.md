@@ -13,6 +13,31 @@ grep -c "^>" augustus.whole.aa
 и составил 16435.
 
 
+## Шаг 3
+С помощью команды создана база данных:
+```shell
+makeblastdb -in augustus.whole.aa -dbtype prot -out tardigrade_proteins_db
+```
+а затем произведён поиск интересующих белков с помощью команды 
+```shell
+blastp -db tardigrade_proteins_db -query peptides.fa -out blast_results.txt -outfmt
+```
+был получен файл blast_results.txt
+Далее осуществили поиск id всех уникальных белков:
+```shell
+# создание файла с id
+awk '{print $2}' blast_results.txt | sort | uniq > protein_ids.txt
+
+# подсчёт количества
+wc -l protein_ids.txt``` 
+
+В резулььтате обнаружено 34 белка. 
+Последовательности этих белков получены с помощью команды
+```shell
+seqtk subseq augustus.whole.aa protein_ids.txt > candidates.fa
+```
+
+
 # Платформы
 1. Вычисления для шагов 1-2, 7-10 и 5 (Prokka) выполнялись локально:
 _OS: macOS Big Sur 10.16 23G80 arm64
