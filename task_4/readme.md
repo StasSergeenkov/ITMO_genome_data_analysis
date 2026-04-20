@@ -22,7 +22,7 @@ makeblastdb -in augustus.whole.aa -dbtype prot -out tardigrade_proteins_db
 ```shell
 blastp -db tardigrade_proteins_db -query peptides.fa -out blast_results.txt -outfmt
 ```
-был получен файл blast_results.txt, (который доступен вот здесь)[task_4/step_3/blast_results.txt]
+был получен файл blast_results.txt, [который доступен вот здесь](task_4/step_3/blast_results.txt)
 Далее осуществили поиск id всех уникальных белков:
 ```shell
 # создание файла с id
