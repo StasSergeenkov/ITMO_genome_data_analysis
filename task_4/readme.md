@@ -29,10 +29,12 @@ blastp -db tardigrade_proteins_db -query peptides.fa -out blast_results.txt -out
 awk '{print $2}' blast_results.txt | sort | uniq > protein_ids.txt
 
 # подсчёт количества
-wc -l protein_ids.txt``` 
+wc -l protein_ids.txt
+``` 
 
 В резулььтате обнаружено 34 белка. 
 Последовательности этих белков получены с помощью команды
+
 ```shell
 seqtk subseq augustus.whole.aa protein_ids.txt > candidates.fa
 ```
