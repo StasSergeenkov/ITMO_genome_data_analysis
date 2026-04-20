@@ -38,8 +38,10 @@ wc -l protein_ids.txt
 ```shell
 seqtk subseq augustus.whole.aa protein_ids.txt > candidates.fa
 ```
+Файл с последовательностями белков [доступен по ссылке](task_4/step_3/candidates.fa)
+
 ## Шаг 4
-Lля предсказания субклеточной локализации белков на основе их аминокислотной последовательности воспользовались WoLF PSORT, [вот результат](https://wolfpsort.hgc.jp/results/aKC5bd986bc0fe5cc455c89f80dd05743c7.html)  
+Для предсказания субклеточной локализации белков на основе их аминокислотной последовательности воспользовались WoLF PSORT, [вот результат](task_4/step_4/wolf_psort.txt)  
 Для уточнения локализации воспользовались TargetP Server: он предсказывает наличие сигнальных пептидов, митохондриальных или хлоропластных транзитных пептидов, [вот результат](https://services.healthtech.dtu.dk/cgi-bin/webface2.cgi?jobid=69E3A87E00171D0FFE60BDAD&wait=20)
 
 ## Шаг 5
