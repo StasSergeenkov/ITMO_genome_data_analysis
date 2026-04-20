@@ -1,8 +1,25 @@
 The number of obtained proteins - 16435 (использовала команду: ```grep -c ">" augustus.whole.aa```)
 
 ### Шаг 3
-На третьем шаге я выполнила пункт, который был recommended, то есть я сначала создала базу данных с помощью команды ```makeblastdb -in augustus.whole.aa -dbtype prot -out tardigrade_proteins_db```, а затем произвела поиск интересующих меня белков с помощью команды ```blastp -db tardigrade_proteins_db -query peptides.fa -out blast_results.txt -outfmt```, команда вывела мне файл blast_results.txt, который я положила в папочку. Далее мы попытались найти айди всех уникальных белков:
-```awk '{print $2}' blast_results.txt | sort | uniq > protein_ids.txt``` - с помощью этой команды мы попросили терминал сделать нам файл с айди белков, затем с помощью ```wc -l protein_ids.txt``` - посчитали количество таких белков - 34 белка. Зптем нам надо было вытащить сами последовательности этих белков. Это мы делали с помощью команды ```seqtk subseq augustus.whole.aa protein_ids.txt > candidates.fa```
+С помощью команды создана база данных:
+```shell
+makeblastdb -in augustus.whole.aa -dbtype prot -out tardigrade_proteins_db```
+а затем произведён поиск интересующих белков с помощью команды 
+```shell
+blastp -db tardigrade_proteins_db -query peptides.fa -out blast_results.txt -outfmt```
+был получен файл blast_results.txt
+Далее осуществили поиск id всех уникальных белков:
+```shell
+# создание файла с id
+awk '{print $2}' blast_results.txt | sort | uniq > protein_ids.txt
+
+# подсчёт количества
+wc -l protein_ids.txt``` 
+
+В резулььтате обнаружено 34 белка. 
+Последовательности этих белков получены с помощью команды
+```shell
+seqtk subseq augustus.whole.aa protein_ids.txt > candidates.fa```
 ### Шаг 4
 Воспользовались WoLF PSORT, [вот результат](https://wolfpsort.hgc.jp/results/aKC5bd986bc0fe5cc455c89f80dd05743c7.html)
 Воспользовались TargetP Server [результаты](https://services.healthtech.dtu.dk/cgi-bin/webface2.cgi?jobid=69E3A87E00171D0FFE60BDAD&wait=20)
