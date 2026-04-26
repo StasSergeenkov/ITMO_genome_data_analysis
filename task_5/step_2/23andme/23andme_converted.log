@@ -1,0 +1,31 @@
+PLINK v1.9.0-b.8 64-bit (22 Oct 2024)
+Options in effect:
+  --23file 23andme_original.txt
+  --out 23andme_converted
+  --recode vcf
+  --snps-only just-acgt
+
+Hostname: stass
+Working directory: /home/stass/ITMO_genome_data_analysis/HW5/step_2/23andme
+Start time: Sun Apr 26 15:24:45 2026
+
+Random number seed: 1777206285
+30354 MB RAM detected; reserving 15177 MB for main workspace.
+--23file: 23andme_converted-temporary.bed + 23andme_converted-temporary.bim +
+23andme_converted-temporary.fam written.
+15125 variants with indel calls present.  '--snps-only no-DI' or
+--list-23-indels may be useful here.
+Inferred sex: male.
+595401 out of 610526 variants loaded from .bim file.
+1 person (1 male, 0 females) loaded from .fam.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1 founder and 0 nonfounders present.
+Calculating allele frequencies... done.
+Warning: 103 het. haploid genotypes present (see 23andme_converted.hh ); many
+commands treat these as missing.
+Total genotyping rate is 0.989246.
+595401 variants and 1 person pass filters and QC.
+Note: No phenotypes present.
+--recode vcf to 23andme_converted.vcf ... done.
+
+End time: Sun Apr 26 15:24:45 2026
