@@ -1,0 +1,50 @@
+
+=== rs5174;6996 ===
+Из VCF: 
+Из ClinVar: CLNDN=Myocardial_infarction,_susceptibility_to,_1
+Патогенность: CLNSIG=risk_factor
+
+=== rs3738401;98346 ===
+Из VCF: 
+Из ClinVar: CLNDN=not_provided
+Патогенность: CLNSIG=not_provided
+
+=== rs6548238;812169 ===
+Из VCF: 
+Из ClinVar: CLNDN=Obesity
+Патогенность: CLNSIG=risk_factor
+
+=== rs121909343;8403 ===
+Из VCF: 
+Из ClinVar: CLNDN=Perry_syndrome|Amyotrophic_lateral_sclerosis,_susceptibility_to
+Патогенность: CLNSIG=Uncertain_significance|risk_factor
+
+=== rs11558538;5160 ===
+Из VCF: 
+Из ClinVar: CLNDN=HNMT-related_disorder|Inherited_susceptibility_to_asthma
+Патогенность: CLNSIG=Benign|risk_factor
+
+=== rs3792267;5093 ===
+Из VCF: 
+Из ClinVar: CLNDN=Type_2_diabetes_mellitus_1,_susceptibility_to
+Патогенность: CLNSIG=risk_factor
+
+=== rs4402960;2435 ===
+Из VCF: 
+Из ClinVar: CLNDN=Diabetes_mellitus_type_2,_susceptibility_to
+Патогенность: CLNSIG=risk_factor
+
+=== rs1368408;4253 ===
+Из VCF: 
+Из ClinVar: CLNDN=Inherited_susceptibility_to_asthma
+Патогенность: CLNSIG=risk_factor
+
+=== rs7754840;812171 ===
+Из VCF: 
+Из ClinVar: CLNDN=Obesity
+Патогенность: CLNSIG=risk_factor
+
+=== rs2071592;8475 ===
+Из VCF: 
+Из ClinVar: CLNDN=Rheumatoid_arthritis
+Патогенность: CLNSIG=risk_factor

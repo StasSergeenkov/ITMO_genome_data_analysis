@@ -1,0 +1,50 @@
+
+=== rs5174;6996 ===
+Из VCF: 
+Из ClinVar: CLNDN=Myocardial_infarction,_susceptibility_to,_1
+Патогенность: CLNSIG=risk_factor
+
+=== rs2073658;12295 ===
+Из VCF: 
+Из ClinVar: CLNDN=Hyperlipidemia,_familial_combined,_susceptibility_to
+Патогенность: CLNSIG=risk_factor
+
+=== i3000469;5160 ===
+Из VCF: 
+Из ClinVar: CLNDN=HNMT-related_disorder|Inherited_susceptibility_to_asthma
+Патогенность: CLNSIG=Benign|risk_factor
+
+=== rs4402960;2435 ===
+Из VCF: 
+Из ClinVar: CLNDN=Diabetes_mellitus_type_2,_susceptibility_to
+Патогенность: CLNSIG=risk_factor
+
+=== rs909253;14380 ===
+Из VCF: 
+Из ClinVar: CLNDN=Psoriatic_arthritis,_susceptibility_to|Myocardial_infarction,_susceptibility_to
+Патогенность: CLNSIG=risk_factor
+
+=== rs4880;14751 ===
+Из VCF: 
+Из ClinVar: CLNDN=SOD2_POLYMORPHISM|Microvascular_complications_of_diabetes,_susceptibility_to,_6
+Патогенность: CLNSIG=Conflicting_classifications_of_pathogenicity|risk_factor
+
+=== rs1800795;14718 ===
+Из VCF: 
+Из ClinVar: CLNDN=Diabetes_mellitus,_type_1,_susceptibility_to|Diabetes_mellitus_type_2,_susceptibility_to|Kaposi_sarcoma|.|Crohn_disease-associated_growth_failure,_susceptibility_to|.|Cholangiocarcinoma
+Патогенность: CLNSIG=other|risk_factor
+
+=== rs7794745;5492 ===
+Из VCF: 
+Из ClinVar: CLNDN=Autism,_susceptibility_to,_15
+Патогенность: CLNSIG=risk_factor
+
+=== rs13266634;1000 ===
+Из VCF: 
+Из ClinVar: CLNDN=SLC30A8-related_disorder|Diabetes_mellitus_type_2,_susceptibility_to
+Патогенность: CLNSIG=Benign|risk_factor
+
+=== rs10757274;812640 ===
+Из VCF: 
+Из ClinVar: CLNDN=Three_Vessel_Coronary_Disease
+Патогенность: CLNSIG=risk_factor
