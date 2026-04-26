@@ -25,11 +25,6 @@ plink --vcf genotek_original.vcf --snps-only just-acgt --recode vcf --out genote
 ## Шаг 3
 Для определения пола искали Y-хромосомные SNP:
 ```shell
-cd /home/stass/ITMO_genome_data_analysis/HW5/step_3
-mkdir -p genotek
-
-cp /home/stass/ITMO_genome_data_analysis/HW5/step_2/genotek/genotek.vcf genotek/
-
 y_count=$(grep -v "^#" genotek.vcf | grep -c "^chrY")
 x_count=$(grep -v "^#" genotek.vcf | grep -c "^chrX")
 
@@ -37,11 +32,6 @@ echo "Y: $y_count, X: $x_count, Ratio Y/X: $(echo "scale=4; $y_count/$x_count" |
 ```
 Аналогично для 23andMe, но с изменениями (обозначение хромосом отличается):
 ```shell
-cd /home/stass/ITMO_genome_data_analysis/HW5/step_3
-mkdir -p 23andme
-
-cp /home/stass/ITMO_genome_data_analysis/HW5/step_2/23andme/23andme_converted.vcf 23andme/
-
 y_count=$(grep -v "^#" 23andme_converted.vcf | grep -c "^24")
 x_count=$(grep -v "^#" 23andme_converted.vcf | grep -c "^23")
 
@@ -97,7 +87,7 @@ rs1800407 (OCA2): 0/0
 Предположительный цвет глаз: голубой/зелёный
 
 _для 23andMe_
-Пол: мужской (соотношение Y/X 0,1361)  
+Пол: мужской (соотношение Y/X 0,1110)  
 rs12913832 (HERC2): 0/1  
 rs1800407 (OCA2): 0/0  
 Предположительный цвет глаз: голубой/зелёный
