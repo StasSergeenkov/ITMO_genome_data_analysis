@@ -155,7 +155,7 @@ done < <(head -10 mutations_risk.txt)
 | 9 | rs7754840 | CDKAL1 | 6 | 20802271 | Ожирение | 0/1 (C/G) | 0/0 (C/C) | G-C |
 | 10 | rs2071592 | — | — | — | Ревматоидный артрит | 0/1 | 0/0 | — |
 
-Аналогично для 23andme:
+Аналогично для 23andme (все действия единой командой):
 ```shell
 echo "Количество вариантов с мутацией"
 grep -v "^#" /home/stass/ITMO_genome_data_analysis/HW5/step_4/23andme/23andme_converted.vcf | awk '{if($10!="0/0" && $10!="0|0") print $0}' | wc -l
