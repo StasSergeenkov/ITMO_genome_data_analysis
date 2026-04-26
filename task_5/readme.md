@@ -13,14 +13,13 @@
 plink --23file 23andme_original.txt --recode vcf --out 23andme_converted --snps-only just-acgt
 ```
 Количество SNP в исходном: 610526. После конвертации в VCF: 595401.
-> [Выходной файл 23andme_converted.vcf тут]()
 
 Также проведена очистка файла Genotek VCF:
 ```shell
 plink --vcf genotek_original.vcf --snps-only just-acgt --recode vcf --out genotek_clean
 ```
 Количество SNP в исходном: 618255. После очистки (snps-only): 608921.
-> [Выходной файл genotek_clean.vcf тут]()
+
 
 ## Шаг 3
 Для определения пола искали Y-хромосомные SNP:
