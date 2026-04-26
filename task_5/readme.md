@@ -155,6 +155,34 @@ done < <(head -10 mutations_risk.txt)
 | 9 | rs7754840 | CDKAL1 | 6 | 20802271 | Ожирение | 0/1 (C/G) | 0/0 (C/C) | G-C |
 | 10 | rs2071592 | — | — | — | Ревматоидный артрит | 0/1 | 0/0 | — |
 
+Аналогично для 23andme:
+```shell
+echo "Количество вариантов с мутацией"
+grep -v "^#" /home/stass/ITMO_genome_data_analysis/HW5/step_4/23andme/23andme_converted.vcf | awk '{if($10!="0/0" && $10!="0|0") print $0}' | wc -l
+grep -v "^#" /home/stass/ITMO_genome_data_analysis/HW5/step_4/23andme/23andme_converted.vcf | awk '{if($10!="0/0" && $10!="0|0") print $0}' > mutations_real.txt
+
+awk '{print $3}' mutations_real.txt > mutation_rsids.txt
+grep -f mutation_rsids.txt /home/stass/ITMO_genome_data_analysis/HW5/step_4/23andme/23andme_annotated.vcf > mutations_clinical.txt
+echo "Количество клинически значимых мутаций у индивида"
+wc -l mutations_clinical.txt
+
+grep "risk_factor" /home/stass/ITMO_genome_data_analysis/HW5/step_4/23andme/23andme_annotated.vcf | grep -f mutation_rsids.txt > mutations_risk.txt
+echo "=== Количество risk_factor вариантов у индивида ==="
+wc -l mutations_risk.txt
+
+cat > real_mutations_detailed.txt << 'EOF'
+EOF
+
+while read line; do
+    rsid=$(echo "$line" | awk '{print $3}')
+    echo "" >> real_mutations_detailed.txt
+    echo "=== $rsid ===" >> real_mutations_detailed.txt
+    echo "Из VCF: $(grep -w "$rsid" /home/stass/ITMO_genome_data_analysis/HW5/step_4/23andme/23andme_converted.vcf)" >> real_mutations_detailed.txt
+    echo "Из ClinVar: $(grep -w "$rsid" /home/stass/ITMO_genome_data_analysis/HW5/step_4/23andme/23andme_annotated.vcf | grep -o 'CLNDN=[^;]*' | head -1)" >> real_mutations_detailed.txt
+    echo "Патогенность: $(grep -w "$rsid" /home/stass/ITMO_genome_data_analysis/HW5/step_4/23andme/23andme_annotated.vcf | grep -o 'CLNSIG=[^;]*' | head -1)" >> real_mutations_detailed.txt
+done < <(head -10 mutations_risk.txt)
+```
+
 # Платформы
 1. Вычисления для шагов выполнялись локально:
 _OS: Ubuntu 24.04.4 LTS on Windows 10 x86_64
