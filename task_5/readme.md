@@ -66,6 +66,30 @@ rs12913832 (HERC2): 0/1
 rs1800407 (OCA2): 0/0  
 Предположительный цвет глаз: голубой/зелёный
 
+## Шаг 4
+Выполнили поиск pathogenic вариантов. Из них уже выбрали 5 конкретных вариантов по степени представленности в литературе.
+
+| № | rsID | Ген | Заболевание | Тип мутации |
+|---|------|-----|-------------|-------------|
+| 1 | **rs387907304** | SKI | Shprintzen-Goldberg syndrome | missense |
+| 2 | **rs397514590** | SKI | Familial thoracic aortic aneurysm | missense |
+| 3 | **rs121434297** | MTHFR | Homocystinuria / Neural tube defects | missense |
+| 4 | **rs786201085** | SDHB | Hereditary cancer-predisposing syndrome | missense |
+| 5 | **rs397516835** | SDHB | Hereditary cancer-predisposing syndrome | missense |
+
+Далее найдены все варианты:
+=== rs387907304 ===
+1	2160299	rs387907304	C	G	.	.	PR	GT	0/0
+=== rs397514590 ===
+1	2160308	rs397514590	C	T	.	.	PR	GT	0/0
+=== rs121434297 ===
+1	11855218	rs121434297	A	G	.	.	PR	GT	0/0
+=== rs786201085 ===
+1	17349110	rs786201085	C	T	.	.	PR	GT	0/0
+=== rs397516835 ===
+1	17350535	rs397516835	C	T	.	.	PR	GT	0/0
+
+
 
 
 
