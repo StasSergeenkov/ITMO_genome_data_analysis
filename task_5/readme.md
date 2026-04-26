@@ -28,9 +28,12 @@ plink --vcf genotek_original.vcf --snps-only just-acgt --recode vcf --out genote
 cd /home/stass/ITMO_genome_data_analysis/HW5/step_3
 mkdir -p genotek
 
-cp /home/stass/ITMO_genome_data_analysis/HW5/step_2/genotek/genotek_clean.vcf genotek/
+cp /home/stass/ITMO_genome_data_analysis/HW5/step_2/genotek/genotek.vcf genotek/
 
-grep -i "^Y" genotek/genotek_clean.vcf | head -n 5
+y_count=$(grep -v "^#" genotek.vcf | grep -c "^chrY")
+x_count=$(grep -v "^#" genotek.vcf | grep -c "^chrX")
+
+echo "Y: $y_count, X: $x_count, Ratio Y/X: $(echo "scale=4; $y_count/$x_count" | bc)"
 ```
 Для определения цвета глаз извлекли генотипы SNP из VCF:
 ```shell
@@ -58,7 +61,7 @@ SnpSift annotate /home/stass/ITMO_genome_data_analysis/HW5/databases/clinvar.vcf
   > /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_annotated.vcf
 ```
 Результат шага 3:  
-Пол: женский (XX)  
+Пол: мужской (соотношение Y/X 0,1361)  
 rs12913832 (HERC2): 0/1  
 rs1800407 (OCA2): 0/0  
 Предположительный цвет глаз: голубой/зелёный или карий (гетерозигота)
