@@ -79,6 +79,14 @@ SnpSift annotate /home/stass/ITMO_genome_data_analysis/HW5/databases/clinvar.vcf
   /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_clean.vcf \
   > /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_annotated.vcf
 ```
+
+Аналогично для 23andMe:
+```shell
+SnpSift annotate /home/stass/ITMO_genome_data_analysis/HW5/databases/clinvar.vcf \
+  /home/stass/ITMO_genome_data_analysis/HW5/step_3/23andme/23andme_converted.vcf \
+  > /home/stass/ITMO_genome_data_analysis/HW5/step_3/23andme/23andme_annotated.vcf
+```
+
 Результат шага 3:  
 _для Genotek_  
 Пол: мужской (соотношение Y/X 0,1361)  
