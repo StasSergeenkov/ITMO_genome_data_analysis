@@ -79,14 +79,14 @@ SnpSift annotate /home/stass/ITMO_genome_data_analysis/HW5/databases/clinvar.vcf
   /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_clean.vcf \
   > /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_annotated.vcf
 ```
-Результат шага 3:
-_для Genotek_
+Результат шага 3:  
+_для Genotek_  
 Пол: мужской (соотношение Y/X 0,1361)  
 rs12913832 (HERC2): 0/1  
 rs1800407 (OCA2): 0/0  
-Предположительный цвет глаз: голубой/зелёный
+Предположительный цвет глаз: голубой/зелёный  
 
-_для 23andMe_
+_для 23andMe_  
 Пол: мужской (соотношение Y/X 0,1110)  
 rs12913832 (HERC2): 0/1  
 rs1800407 (OCA2): 0/0  
