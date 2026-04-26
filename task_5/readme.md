@@ -57,10 +57,10 @@ SnpSift annotate /home/stass/ITMO_genome_data_analysis/HW5/databases/clinvar.vcf
   /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_clean.vcf \
   > /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_annotated.vcf
 ```
-Результат шага 3:
-Пол: женский (XX)
-rs12913832 (HERC2): 0/1
-rs1800407 (OCA2): 0/0
+Результат шага 3:  
+Пол: женский (XX)  
+rs12913832 (HERC2): 0/1  
+rs1800407 (OCA2): 0/0  
 Предположительный цвет глаз: голубой/зелёный или карий (гетерозигота)
 
 
