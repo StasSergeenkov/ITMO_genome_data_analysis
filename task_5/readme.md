@@ -22,6 +22,50 @@ plink --vcf genotek_original.vcf --snps-only just-acgt --recode vcf --out genote
 Количество SNP в исходном: 618255. После очистки (snps-only): 608921.
 > [Выходной файл genotek_clean.vcf тут]()
 
+## Шаг 3
+Для определения пола искали Y-хромосомные SNP:
+```shell
+cd /home/stass/ITMO_genome_data_analysis/HW5/step_3
+mkdir -p genotek
+
+cp /home/stass/ITMO_genome_data_analysis/HW5/step_2/genotek/genotek_clean.vcf genotek/
+
+grep -i "^Y" genotek/genotek_clean.vcf | head -n 5
+```
+Для определения цвета глаз извлекли генотипы SNP из VCF:
+```shell
+echo "" >> genotek/sex_eye_color.txt
+echo "# Цвет глаз" >> genotek/sex_eye_color.txt
+
+# Функция для извлечения генотипа из VCF по rsid
+get_genotype() {
+    rsid=$1
+    grep -w "$rsid" genotek/genotek_clean.vcf | awk '{print $10}' | cut -d: -f1
+}
+
+rs12913832=$(get_genotype "rs12913832")
+rs1800407=$(get_genotype "rs1800407")
+
+echo "rs12913832 (HERC2): $rs12913832" >> genotek/sex_eye_color.txt
+echo "rs1800407 (OCA2): $rs1800407" >> genotek/sex_eye_color.txt
+```
+
+
+Провели аннотацию genotek_clean.vcf:
+```shell
+SnpSift annotate /home/stass/ITMO_genome_data_analysis/HW5/databases/clinvar.vcf \
+  /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_clean.vcf \
+  > /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_annotated.vcf
+```
+Результат шага 3:
+Пол: женский (XX)
+rs12913832 (HERC2): 0/1
+rs1800407 (OCA2): 0/0
+Предположительный цвет глаз: голубой/зелёный или карий (гетерозигота)
+
+
+
+
 # Платформы
 1. Вычисления для шагов 3, 7 выполнялись локально:
 _OS: macOS Big Sur 10.16 23G80 arm64
