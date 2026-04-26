@@ -1,0 +1,29 @@
+PLINK v1.9.0-b.8 64-bit (22 Oct 2024)
+Options in effect:
+  --out genotek_clean
+  --recode vcf
+  --snps-only just-acgt
+  --vcf genotek_original.vcf
+
+Hostname: stass
+Working directory: /home/stass/ITMO_genome_data_analysis/HW5/step_2/genotek
+Start time: Sun Apr 26 15:30:03 2026
+
+Random number seed: 1777206603
+30354 MB RAM detected; reserving 15177 MB for main workspace.
+--vcf: genotek_clean-temporary.bed + genotek_clean-temporary.bim +
+genotek_clean-temporary.fam written.
+608921 out of 618255 variants loaded from .bim file.
+1 person (0 males, 0 females, 1 ambiguous) loaded from .fam.
+Ambiguous sex ID written to genotek_clean.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 1 founder and 0 nonfounders present.
+Calculating allele frequencies... done.
+Warning: Nonmissing nonmale Y chromosome genotype(s) present; many commands
+treat these as missing.
+Total genotyping rate is exactly 1.
+608921 variants and 1 person pass filters and QC.
+Note: No phenotypes present.
+--recode vcf to genotek_clean.vcf ... done.
+
+End time: Sun Apr 26 15:30:04 2026
