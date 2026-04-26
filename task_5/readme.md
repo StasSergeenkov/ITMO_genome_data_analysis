@@ -35,6 +35,19 @@ x_count=$(grep -v "^#" genotek.vcf | grep -c "^chrX")
 
 echo "Y: $y_count, X: $x_count, Ratio Y/X: $(echo "scale=4; $y_count/$x_count" | bc)"
 ```
+Аналогично для 23andMe, но с изменениями (обозначение хромосом отличается):
+```shell
+cd /home/stass/ITMO_genome_data_analysis/HW5/step_3
+mkdir -p 23andme
+
+cp /home/stass/ITMO_genome_data_analysis/HW5/step_2/23andme/23andme_converted.vcf 23andme/
+
+y_count=$(grep -v "^#" 23andme_converted.vcf | grep -c "^24")
+x_count=$(grep -v "^#" 23andme_converted.vcf | grep -c "^23")
+
+echo "Y: $y_count, X: $x_count, Ratio Y/X: $(echo "scale=4; $y_count/$x_count" | bc)"
+```
+
 Для определения цвета глаз извлекли генотипы SNP из VCF:
 ```shell
 echo "" >> genotek/sex_eye_color.txt
@@ -52,7 +65,23 @@ rs1800407=$(get_genotype "rs1800407")
 echo "rs12913832 (HERC2): $rs12913832" >> genotek/sex_eye_color.txt
 echo "rs1800407 (OCA2): $rs1800407" >> genotek/sex_eye_color.txt
 ```
+Аналогично для 23andMe:
+```shell
+echo "" >> 23andme/sex_eye_color.txt
+echo "# Цвет глаз" >> 23andme/sex_eye_color.txt
 
+# Функция для извлечения генотипа из VCF по rsid
+get_genotype() {
+    rsid=$1
+    grep -w "$rsid" 23andme/23andme_converted.vcf | awk '{print $10}' | cut -d: -f1
+}
+
+rs12913832=$(get_genotype "rs12913832")
+rs1800407=$(get_genotype "rs1800407")
+
+echo "rs12913832 (HERC2): $rs12913832" >> 23andme/sex_eye_color.txt
+echo "rs1800407 (OCA2): $rs1800407" >> 23andme/sex_eye_color.txt
+```
 
 Провели аннотацию genotek_clean.vcf:
 ```shell
@@ -60,7 +89,14 @@ SnpSift annotate /home/stass/ITMO_genome_data_analysis/HW5/databases/clinvar.vcf
   /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_clean.vcf \
   > /home/stass/ITMO_genome_data_analysis/HW5/step_3/genotek/genotek_annotated.vcf
 ```
-Результат шага 3:  
+Результат шага 3:
+_для Genotek_
+Пол: мужской (соотношение Y/X 0,1361)  
+rs12913832 (HERC2): 0/1  
+rs1800407 (OCA2): 0/0  
+Предположительный цвет глаз: голубой/зелёный
+
+_для 23andMe_
 Пол: мужской (соотношение Y/X 0,1361)  
 rs12913832 (HERC2): 0/1  
 rs1800407 (OCA2): 0/0  
