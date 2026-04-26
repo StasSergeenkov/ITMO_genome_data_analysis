@@ -101,31 +101,59 @@ rs1800407 (OCA2): 0/0
 Предположительный цвет глаз: голубой/зелёный
 
 ## Шаг 4
-Выполнили поиск pathogenic вариантов. Из них уже выбрали 5 конкретных вариантов по степени представленности в литературе.
+Выбор клинически значимых SNP осуществлялся в несколько шагов.  
+Первым делом были найдены все варианты с мутацией:
+```shell
+echo "Количество вариантов с мутацией"
+grep -v "^#" genotek_clean.vcf | awk '{if($10!="0/0" && $10!="0|0") print $0}' | wc -l
+grep -v "^#" genotek_clean.vcf | awk '{if($10!="0/0" && $10!="0|0") print $0}' > mutations_real.txt
+```
 
-| № | rsID | Ген | Заболевание | Тип мутации |
-|---|------|-----|-------------|-------------|
-| 1 | **rs387907304** | SKI | Shprintzen-Goldberg syndrome | missense |
-| 2 | **rs397514590** | SKI | Familial thoracic aortic aneurysm | missense |
-| 3 | **rs121434297** | MTHFR | Homocystinuria / Neural tube defects | missense |
-| 4 | **rs786201085** | SDHB | Hereditary cancer-predisposing syndrome | missense |
-| 5 | **rs397516835** | SDHB | Hereditary cancer-predisposing syndrome | missense |
+Клинически значимые из них получены так:
+```shell
+awk '{print $3}' mutations_real.txt > mutation_rsids.txt
+grep -f mutation_rsids.txt genotek_annotated.vcf > mutations_clinical.txt
+echo "Количество клинически значимых мутаций у индивида"
+wc -l mutations_clinical.txt
+```
 
-Далее найдены все варианты:
-=== rs387907304 ===
-1	2160299	rs387907304	C	G	.	.	PR	GT	0/0
-=== rs397514590 ===
-1	2160308	rs397514590	C	T	.	.	PR	GT	0/0
-=== rs121434297 ===
-1	11855218	rs121434297	A	G	.	.	PR	GT	0/0
-=== rs786201085 ===
-1	17349110	rs786201085	C	T	.	.	PR	GT	0/0
-=== rs397516835 ===
-1	17350535	rs397516835	C	T	.	.	PR	GT	0/0
+Отфильтровали факторы риска:
+```shell
+grep "risk_factor" genotek_annotated.vcf | grep -f mutation_rsids.txt > mutations_risk.txt
+echo "=== Количество risk_factor вариантов у индивида ==="
+wc -l mutations_risk.txt
+```
 
+На основе полученных данных сформируем таблицу:
+```shell
+cat > real_mutations_detailed.txt << 'EOF'
+EOF
 
+while read line; do
+    rsid=$(echo "$line" | awk '{print $3}')
+    echo "" >> real_mutations_detailed.txt
+    echo "=== $rsid ===" >> real_mutations_detailed.txt
+    echo "Из VCF: $(grep -w "$rsid" genotek_clean.vcf)" >> real_mutations_detailed.txt
+    echo "Из ClinVar: $(grep -w "$rsid" genotek_annotated.vcf | grep -o 'CLNDN=[^;]*' | head -1)" >> real_mutations_detailed.txt
+    echo "Патогенность: $(grep -w "$rsid" genotek_annotated.vcf | grep -o 'CLNSIG=[^;]*' | head -1)" >> real_mutations_detailed.txt
+done < <(head -10 mutations_risk.txt)
+```
 
+У индивида нет патогенных мутаций, реальные изменения нужно вносить на основе факторов риска. CRISPR-правки в данном случае направлены на снижение риска заболеваний, а не на исправление уже существующей болезни.
+Выделены следующие SNP:
 
+| № | rsID | Ген | Хромосома | Позиция (GRCh37) | Риск | Текущий GT | Желаемый GT | Замена (ALT-REF) |
+|---|------|-----|-----------|------------------|------|------------|-------------|------------------|
+| 1 | rs5174 | LRP8 | 1 | 53712727 | Инфаркт миокарда | 0/1 (C/T) | 0/0 (C/C) | T-C |
+| 2 | rs3738401 | — | — | — | not_provided | 0/1 | 0/0 | — |
+| 3 | rs6548238 | TMEM18 | 2 | 622051 | Ожирение | 0/1 (C/T) | 0/0 (C/C) | T-C |
+| 4 | rs121909343 | MAPT | 17 | 44089581 | Синдром Перри, ALS | 0/1 (A/G) | 0/0 (A/A) | G-A |
+| 5 | rs11558538 | HNMT | 2 | 138759649 | Астма, HNMT-нарушение | 0/1 (C/T) | 0/0 (C/C) | T-C |
+| 6 | rs3792267 | CAPN10 | 2 | 241584825 | Сахарный диабет 2 типа | 0/1 (G/A) | 0/0 (G/G) | A-G |
+| 7 | rs4402960 | IGF2BP2 | 3 | 185511013 | Сахарный диабет 2 типа | 0/1 (A/G) | 0/0 (A/A) | G-A |
+| 8 | rs1368408 | — | — | — | Астма | 0/1 | 0/0 | — |
+| 9 | rs7754840 | CDKAL1 | 6 | 20802271 | Ожирение | 0/1 (C/G) | 0/0 (C/C) | G-C |
+| 10 | rs2071592 | — | — | — | Ревматоидный артрит | 0/1 | 0/0 | — |
 
 # Платформы
 1. Вычисления для шагов 3, 7 выполнялись локально:
